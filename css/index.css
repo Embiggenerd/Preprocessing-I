@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -109,7 +110,11 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  margin-left: 20px;
+  list-style: circle;
+}
+li {
+  line-height: 2;
 }
 blockquote,
 q {
@@ -119,37 +124,17 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* Set every element's box-sizing to border-box */
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  height: 100%;
-}
-.container {
-  margin: 20px 20px 0 20px;
-}
-html {
-  font-family: sans-serif;
-}
-table {
-  border-collapse: collapse;
-  border: 2px solid #c8c8c8;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-}
 td,
 th {
   border: 1px solid #bebebe;
-  padding: 10px 20px;
+  padding: 20px 40px;
 }
 th {
   background-color: #ebebeb;
@@ -165,4 +150,102 @@ tr:nth-child(odd) td {
 }
 caption {
   padding: 10px;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  margin: 60px 5% 0 5%;
+}
+.container nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .container nav {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-around;
+    align-items: center;
+  }
+}
+.container nav a {
+  margin: 20px;
+  color: black;
+}
+@media (max-width: 700px) {
+  .container header img {
+    display: none;
+  }
+}
+.container header button {
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+.container header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+.container header p {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+.container section {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .container section {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-around;
+    align-items: center;
+  }
+}
+.container section div {
+  width: 49%;
+  padding: 1%;
+  border: 10px #b8b6b6 solid;
+  border-radius: 15px;
+}
+@media (max-width: 500px) {
+  .container section div {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+.container section span {
+  margin-bottom: 20px;
+}
+.container table {
+  border-collapse: collapse;
+  border: 2px solid #c8c8c8;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  overflow-x: auto;
+}
+.container footer {
+  background: grey;
+  height: 90px;
+  text-align: center;
+  padding-top: 40px;
+}
+.container hr {
+  margin: 20px 0;
 }
