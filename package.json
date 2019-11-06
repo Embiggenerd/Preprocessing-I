@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "less-watch-compiler": "^1.14.1",
+    "lessc": "^1.0.2"
+  }
+}
