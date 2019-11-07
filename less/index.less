@@ -4,56 +4,266 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  margin-left: 20px;
+  list-style: circle;
 }
-blockquote, q {
-	quotes: none;
+li {
+  line-height: 2;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 20px 40px;
+}
+
+th {
+  background-color: rgb(235, 235, 235);
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250, 250, 250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(245, 245, 245);
+}
+
+caption {
+  padding: 10px;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
+}
+html {
+  font-family: @font-roboto;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+// variables
+@font-roboto: 'Roboto', sans-serif;
+// mixings
+.flex-row() {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-column() {
+  display: flex;
+  flex-direction: column;
+  justify-items: space-around;
+  align-items: center;
+}
+
+.border-fuzzy() {
+  border: 10px rgb(184, 182, 182) solid;
+  border-radius: 15px;
+}
+
+// container for entire page
+.container {
+  margin: 60px 5% 0 5%;
+  nav {
+    .flex-row();
+    justify-content: end;
+	margin-bottom: 20px;
+	@media(max-width:500px) {
+		.flex-column();
+	}
+    a {
+      margin: 20px;
+      color: black;
+    }
+  }
+  header {
+	  img {
+		@media(max-width: 700px) {
+			display: none;
+		}
+	  }
+    button {
+      background: white;
+      border: 1px solid black;
+      border-radius: 5px;
+      font-size: 1rem;
+      padding: 5px 10px;
+    }
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+    }
+    p {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+  } // header
+  section {
+    margin: 40px 0;
+	.flex-row();
+	@media(max-width:500px){
+		.flex-column()
+	} // media
+    div {
+      width: 49%;
+      padding: 1%;
+	  .border-fuzzy();
+	  @media(max-width: 500px) {
+		  width: 100%;
+		  margin: 20px 0;
+	  } //media
+	} // div
+	span {
+		margin-bottom: 20px;
+	}
+  } // section
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+	font-size: 1rem;
+	overflow-x:auto;
+  } // table
+  footer {
+    background: grey;
+    height: 90px;
+    text-align: center;
+    padding-top: 40px;
+  }
+  hr {
+    margin: 20px 0;
+  }
+} // container div

@@ -1,9 +1,10 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
@@ -14,6 +15,101 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+    <nav>
+      <a href="#about">About</a>
+      <a href="https://embiggenerd.github.io/">Portfolio</a>
+      <a href="#contact">Contact</a>
+      <a href="#experience">Experience</a>
+    </nav>
+
+    <header>
+      <div class="header-img-container">
+        <img src="img/clark-kent.jpg">
+      </div>
+      <h1>Clark Kent - Photographer</h1>
+      <p class="large-p">For some reason always takes pics of superman</p>
+      <p>Occasionally, I take pictures of not superman</p>
+      <button class="header-button">Send me money</button>
+    </header>
+
+    <section>
+
+      <div id="about">
+        <h2>A little but about me</h2>
+        <p>Don't bother me unless it's about Superman. He is the best super hero, and he
+          will never even abuse his powers. That is really rare in a person. The only Other
+          person I know who has that quality is Igor Atakhanov. Now that guy is a winner.
+        </p>
+      </div>
+
+      <div class="bullets">
+        <h2>Here's a lit of skills</h2>
+        <ul>
+          <li>Taking pictures</li>
+          <li>Taking pictures of superman</li>
+          <li>I basically only take pictures of superman</li>
+          <li>Don't be suspicious</li>
+          <li>Jesus loves you</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experience" style="overflow-x:auto;">
+      <table>
+        <caption>
+          Here's some of my work history
+        </caption>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Description</th>
+            <th>From until</th>
+            <th>Role</th>
+            <th>Pay</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Globe News</td>
+          <td>I took pictures of supreman</td>
+          <td>1996 - present</td>
+          <td>Photographer</td>
+          <td>One hundred fifty billion</td>
+        </tr>
+        <tr>
+          <td>Other kinds of News</td>
+          <td>I took pictures of supreman</td>
+          <td>1995 - 1996</td>
+          <td>Photographer</td>
+          <td>Like nothing, bro</td>
+        </tr>
+        <tr>
+          <td>I'm already out of names of newspapers</td>
+          <td>I took pictures of things</td>
+          <td>1994 - 1995</td>
+          <td>Photographer</td>
+          <td>Aight</td>
+        </tr>
+        <tr>
+          <td>Sun Times?</td>
+          <td>I put things in slots</td>
+          <td>1992 - 1994</td>
+          <td>Mailroom clerk</td>
+          <td>Like nothing, seriously</td>
+        </tr>
+      </table>
+    </section>
+    
+    <section id="contact">
+      <span>IgorAtakhanov@gmail.com</span>
+      <span>IgorAtakhanov.com</span>
+      <span>github.com/embiggenerd</span>
+
+    </section>
+    <footer>
+      Copyright Igor Atakhanov 2019
+    </footer>
+  </div>
 </body>
+
 </html>
